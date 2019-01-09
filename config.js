@@ -1,17 +1,17 @@
 module.exports = {
   title: 'Vlads Blog', // Required
-  author: 'Ryan Fitzgerald', // Required
-  description: 'Full-stack Web Developer',
+  author: 'Vlad Korolev', // Required
+  description: 'Developer',
   primaryColor: '#3498db', // Required
   showHeaderImage: true,
   showShareButtons: true,
   postsPerPage: 5, // Required
   social: {
-    website: 'https://ryanfitzgerald.ca',
+    website: 'https://v-lad.org',
     github: 'https://github.com/vladistan',
     twitter: 'https://twitter.com/vladistan',
     linkedin: 'https://ca.linkedin.com/in/ryanafitzgerald',
   },
   pathPrefix: '/',
-  siteUrl: 'https://ryanfitzgerald.github.io/devblog/',
+  siteUrl: 'https://blog.v-lad.org',
 };
