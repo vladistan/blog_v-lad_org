@@ -7,10 +7,9 @@ module.exports = {
   showShareButtons: true,
   postsPerPage: 25, // Required
   social: {
-    website: 'https://v-lad.org',
+    website: 'http://v-lad.org',
     github: 'https://github.com/vladistan',
-    twitter: 'https://twitter.com/vladistan',
-    linkedin: 'https://ca.linkedin.com/in/ryanafitzgerald',
+    linkedin: 'https://www.linkedin.com/in/vladkorolev/',
   },
   pathPrefix: '/',
   siteUrl: 'https://blog.v-lad.org',

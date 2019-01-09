@@ -1,6 +1,9 @@
 ---
 title: Hadoop tutorial for Windows and Eclipse
 date: "2009-03-20"
+redirect_from:
+  - /new-goodies-aperture-file-types-icons/
+  - /archives/4
 ---
 
 Hadoop tutorial for Windows and [Eclipse](https://www.eclipse.org/).

@@ -47,6 +47,7 @@ module.exports = {
         trackingId: `UA-326609-2`
       },
     },
+    `gatsby-remark-reading-time`,
     {
     resolve: `gatsby-plugin-feed`,
     options: {
@@ -121,6 +122,7 @@ module.exports = {
         talkyardServerUrl: `https://comments-for-testblog-v-lad-org.talkyard.net`
       }
     },
-    `gatsby-remark-reading-time`,
+    `gatsby-redirect-from`,
+    `gatsby-plugin-meta-redirect`,    
   ],
 };
