@@ -16,6 +16,8 @@ import FeaturedImage from '../components/FeaturedImage';
 import PageNav from '../components/PageNav';
 import Share from '../components/Share';
 
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
@@ -56,7 +58,9 @@ class BlogPostTemplate extends React.Component {
             {userConfig.showShareButtons && (
               <Share url={url} title={post.frontmatter.title} />
             )}
+            <TalkyardCommentsIframe discussionId={post.frontmatter.discussionId} />
           </Card>
+
 
           <PageNav>
             {previous && (
@@ -93,6 +97,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        discussionId
         featuredImage {
           childImageSharp {
             sizes(maxWidth: 850) {

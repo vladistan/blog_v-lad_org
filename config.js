@@ -3,9 +3,9 @@ module.exports = {
   author: 'Vlad Korolev', // Required
   description: 'Developer',
   primaryColor: '#3498db', // Required
-  showHeaderImage: true,
+  showHeaderImage: false,
   showShareButtons: true,
-  postsPerPage: 5, // Required
+  postsPerPage: 25, // Required
   social: {
     website: 'https://v-lad.org',
     github: 'https://github.com/vladistan',

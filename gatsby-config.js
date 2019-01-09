@@ -19,12 +19,10 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        excerpt_separator: `<!-- end -->`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 700,
               linkImagesToOriginal: false,
               wrapperStyle: 'margin: 15px -30px !important',
             },
@@ -117,5 +115,12 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `@debiki/gatsby-plugin-talkyard`,
+      options: {
+        talkyardServerUrl: `https://comments-for-testblog-v-lad-org.talkyard.net`
+      }
+    },
+    `gatsby-remark-reading-time`,
   ],
 };
