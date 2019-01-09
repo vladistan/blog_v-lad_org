@@ -119,10 +119,10 @@ module.exports = {
     {
       resolve: `@debiki/gatsby-plugin-talkyard`,
       options: {
-        talkyardServerUrl: `https://comments-for-testblog-v-lad-org.talkyard.net`
+        talkyardServerUrl: `https://comments-for-blog-v-lad-org.talkyard.net`
       }
     },
     `gatsby-redirect-from`,
-    `gatsby-plugin-meta-redirect`,    
+    `gatsby-plugin-meta-redirect`,
   ],
 };
