@@ -12,3 +12,5 @@ This year the challenge was to analyze blockchain based ransomware,  retrieve th
 This year is the first time I managed to solve the entire thing with the other 19 finalists.  Only 1.3% of the participants solved all 7 problems.
 
 I will be posting a complete walkthrough on this blog.  Stay tuned.
+
+* [Task 0 Warmup](../codebreaker2018_task0/)
