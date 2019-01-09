@@ -6,7 +6,7 @@ redirect_from:
   - /archives/13
 ---
 
-Believe it or not some people need to write programs to access Amazon Web Services in This project grew out of the conversion of my old HPC project to run on the amazon EC2.
+Believe it or not some people need to write programs to access Amazon Web Services in C. This project grew out of the conversion of my old HPC project to run on the amazon EC2.
 
 I needed a C library to access the code. Unfortunately I couldn’t find any, so I wrote my own.
 
