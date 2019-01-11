@@ -14,3 +14,4 @@ This year is the first time I managed to solve the entire thing with the other 1
 I will be posting a complete walkthrough on this blog.  Stay tuned.
 
 * [Task 0 Warmup](../codebreaker2018_task0/)
+* [Task 2 Secrets](../codebreaker2018_task2/)
