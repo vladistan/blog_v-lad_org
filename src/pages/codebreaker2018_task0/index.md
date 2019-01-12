@@ -2,8 +2,9 @@
 title: CodeBreaker2018 walkthrough, Task 0 Warm up
 date: "2019-01-03"
 discussionId: "2011-01-03-codebreaker2018-task0"
-featuredImage: './assignment.png'
 ---
+
+![screen](./assignment.png)
 
 This task is really simple,  all you need to do is download given capture file and analyze it with a tool like [tcpdump](https://www.tcpdump.org/) or [WireShark](https://www.wireshark.org/)
 

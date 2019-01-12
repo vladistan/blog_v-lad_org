@@ -2,10 +2,11 @@
 title: CodeBreaker2018 walkthrough, Task 2 Secrets
 date: "2019-01-04"
 discussionId: "2011-01-04-codebreaker2018-task2"
-featuredImage: './assignment.png'
 ---
 
 Let's look at Task 2 before doing Task 1.  It's much quicker and easier task, and it will give us some warm up practice in reverse engineering before we dive into much more involved Task 1.
+
+![screen](./assignment.png)
 
 In this task we are asked to extract secret key from the binaries left over by the ransomware.  To solve this we need to use some reverse engineering tools.
 

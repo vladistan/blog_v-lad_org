@@ -2,8 +2,9 @@
 title: CodeBreaker2018 walkthrough, Task 1 It begins
 date: "2019-01-05"
 discussionId: "2011-01-05-codebreaker2018-task2"
-featuredImage: './assignment.png'
 ---
+
+![screen](./assignment.png)
 
 In this task we are asked to examine the binary pieces left over by ransomware and captured network traffic to extract the following information:
 
@@ -133,6 +134,8 @@ Here is our guess what is the meaning of each message:
   * `PING` - ransomeware again sends a message to the server,  this time with it's just a victim_ip and victim_id signed using the same method
   * `PONG` - server responds with an ACK of some sort
   * `BYE` - finally ransomware sends the final message which just a signature of the last ACK received from the server
+
+*NOTE* The names of these messages are completely made up by me.  As typical in reverse engineering scenarios we don't know the actual names of the variables and constants used by original programmers.  This could be viewed as both a good and a bad thing.  Having look at considerable amount of bad source code, sometimes bad source code is worse than not having a source code at all.  Combination of modern optimizing compilers that clean up and remove redundancies and streamline code and modern reverse engineering tools that show graphs of basic blogs like ones shown above give a lot of insight into internal workings of the software.  
 
 The protocol looks pretty naive and convoluted, probably the attackers are trying to guard against replay attacks and substituted malware code.
 
