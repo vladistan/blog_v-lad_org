@@ -48,3 +48,6 @@ Check out these reading materials.
 
 * Very comprehensive series of posts about linkers and shared libraries [https://www.airs.com/blog/page/4?s=linkers](http://bit.ly/2D3nLBS)
 * [Linkers and loader](https://amzn.to/2VHxBkq) by John R. Levin -- very comprehensive overview of linkers, loaders and shared libraries.  Somewhat dated, but things haven't changed that much since 2000
+
+
+Ok, let's move on to [Task 1](../codebreaker2018_task1)

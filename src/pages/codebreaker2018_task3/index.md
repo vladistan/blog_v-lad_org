@@ -37,3 +37,6 @@ Test case is failing,  but look we now have the new CID value for the other vict
 
 
 ![Solved](./task3-solved.png)
+
+
+Now lets move on to [Task 4](../codebreaker2018_task4)

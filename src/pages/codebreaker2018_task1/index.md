@@ -188,3 +188,5 @@ Now that we have all the data.  We can submit it to the challenge.
    * [Boston](http://bit.ly/2soL5nI)
    * [Washington,DC](http://bit.ly/2QGDOZX)
    * [Global Day of Code Retreat](http://bit.ly/2slH1oa) -- annual event happens around November.
+
+Next let's do [Task 3](../codebreaker2018_task3)

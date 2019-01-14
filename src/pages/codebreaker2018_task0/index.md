@@ -19,3 +19,5 @@ So, let's try.
 ![Solved](./task0-solved.png)
 
 Yes our guess was right.
+
+Next let's do [Task 2](../codebreaker2018_task2/)
