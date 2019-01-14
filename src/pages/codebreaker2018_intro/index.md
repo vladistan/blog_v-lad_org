@@ -16,3 +16,5 @@ I will be posting a complete walkthrough on this blog.  Stay tuned.
 * [Task 0 Warmup](../codebreaker2018_task0/)
 * [Task 2 Secrets](../codebreaker2018_task2/)
 * [Task 1 It Begins](../codebreaker2018_task1)
+* [Task 3 Connections](../codebreaker2018_task3)
+* [Task 4 Victims](../codebreaker2018_task4)
