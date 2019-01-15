@@ -20,3 +20,4 @@ I will be posting a complete walkthrough on this blog.  Stay tuned.
 * [Task 4 Victims](../codebreaker2018_task4)
 * [Task 5 Containment](../codebreaker2018_task5)
 * [Task 6 Loophole](../codebreaker2018_task6)
+* [Task 7 Refunds](../codebreaker2018_task7)

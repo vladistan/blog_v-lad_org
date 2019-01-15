@@ -392,3 +392,5 @@ So all we need to do is press getDecryptionKey button get the key and submit as 
 
 
 ![Solved](./task6-solved.png)
+
+And now on to the final [Task-7](./codebreaker2018_task7)
