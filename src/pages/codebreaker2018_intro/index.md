@@ -19,3 +19,4 @@ I will be posting a complete walkthrough on this blog.  Stay tuned.
 * [Task 3 Connections](../codebreaker2018_task3)
 * [Task 4 Victims](../codebreaker2018_task4)
 * [Task 5 Containment](../codebreaker2018_task5)
+* [Task 6 Loophole](../codebreaker2018_task6)

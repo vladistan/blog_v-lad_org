@@ -20,9 +20,7 @@ Once you cover these introductory materials, read the following articles
 
   * [How to read Ethereum contract storage](http://bit.ly/2CnxzFh) - less technical than above.
 
-  * [Ethernaut](http://bit.ly/2AKVxKZ) - series of exercises, that show how to exploit various loopholes in Ethereum blockchain. Nicole Zhu prepared an Excellent set of [Walkthrough Solutions](http://bit.ly/2VYfLd8) to these exercises. Try doing the exercises first before peeking into the walkthrough.  All of the Ethernaut exercises are very valuable for gaining insight into the inner workings of the blockchain. However, for the purpose of this challenge you need to only go through exercises 1 through 8.
-
-  I developed a [Jupyter notebook](http://bit.ly/2CkZKF6) that lets you poke around different pieces of the blockchain.  You can download the notebook from above link and run it on your own computer.  Or you can use [this version](http://bit.ly/2D12FnY) to run it on Google Collaboratory platform without downloading or installing anything.
+I developed a [Jupyter notebook](http://bit.ly/2CkZKF6) that lets you poke around different pieces of the blockchain.  You can download the notebook from above link and run it on your own computer.  Or you can use [this version](http://bit.ly/2D12FnY) to run it on Google Collaboratory platform without downloading or installing anything.
 
 
 Ok, let's start solving the problem.

@@ -235,3 +235,5 @@ FOUND: 10.47.114.22
 1. We used Jenkins server to help us orchestrate the efforts and organize the results.  To read more about it I suggest [Jenkins: The Definitive Guide](https://amzn.to/2C4ViKn) by John Ferguson Smart
 
 2. To configure jobs we used Jenkins Job DSL language.  It's based on Groovy and to read more about Groovy consider this book [Programming Groovy 2: Dynamic Productivity for the Java Developer](https://amzn.to/2VyxYxp) by Venkat Subramaniam
+
+Now on to [Task 6 Loophole](../codebreaker2018_task6).
