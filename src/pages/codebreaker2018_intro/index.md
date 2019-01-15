@@ -18,3 +18,4 @@ I will be posting a complete walkthrough on this blog.  Stay tuned.
 * [Task 1 It Begins](../codebreaker2018_task1)
 * [Task 3 Connections](../codebreaker2018_task3)
 * [Task 4 Victims](../codebreaker2018_task4)
+* [Task 5 Containment](../codebreaker2018_task5)

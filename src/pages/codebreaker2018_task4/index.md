@@ -78,3 +78,5 @@ Now we have everything we are asked about.
 Let's submit the ids victim of the victims who paid and who have not to the challenge.  
 
 ![Solved](./task4-solved.png)
+
+And now on [Task 5 Containment](../codebreaker2018_task5)
