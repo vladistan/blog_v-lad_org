@@ -228,6 +228,16 @@ FOUND: 10.47.114.22
 
   And then let's submit those to the challenge.
 
+  We brute forced the whole thing under 20 minutes of running time using 10
+  machines paying $0.63/hr for each one.  The total cost to solve this problem
+  is about $2.00.  Not bad at all.
+
+  Note, my actual costs we bit higher. I am still learning how to write programs
+  that run correctly first time I write them. Because of this it took more than
+  one attempt to solve the problem.  My actual costs were about $10.00.
+
+  
+
 ![Solved](./task5-solved.png)
 
 ## Additional reading material
