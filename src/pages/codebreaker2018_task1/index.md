@@ -188,7 +188,7 @@ Now that we have all the data,  we can submit it to the challenge.
 
 3. Most of the TDD material out there usually talks about projects written in languages like Java / Python / Ruby / Javascript.  The James Grenning's [Test Driven Development for Embedded C](https://amzn.to/2RFiBV7) describes a lot of techniques we have used to solve this task
 
-4. The best way to learn TDD is to practice it.  And the best way to practice it is with the group of people.  Checkout these meetups are in your neighborhood:
+4. The best way to learn TDD is to by practicing.  And the best way to practice it is with the group of people.  Checkout these meetups if in your neighborhood:
 
    * [New York](http://bit.ly/2Rm5RDj)
    * [Baltimore](http://bit.ly/2VNQh1L)
