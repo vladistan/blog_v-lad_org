@@ -47,7 +47,6 @@ module.exports = {
         trackingId: `UA-326609-2`
       },
     },
-    `gatsby-remark-reading-time`,
     {
     resolve: `gatsby-plugin-feed`,
     options: {

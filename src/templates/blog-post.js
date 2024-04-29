@@ -45,7 +45,7 @@ class BlogPostTemplate extends React.Component {
             <ArticleHeader>
               {post.frontmatter.featuredImage && (
                 <FeaturedImage
-                  sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+                  image={post.frontmatter.featuredImage}
                 />
               )}
               <h1>{post.frontmatter.title}</h1>
@@ -100,7 +100,7 @@ export const pageQuery = graphql`
         discussionId
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 850) {
+              ...{post.frontmatter.featuredImage}
               ...GatsbyImageSharpSizes
             }
           }
