@@ -52,6 +52,10 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: { trackingIds: [ "G-4KG00QCXJD",] },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
