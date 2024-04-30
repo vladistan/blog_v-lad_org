@@ -1,156 +1,229 @@
-# DevBlog
+<p align="center">
+  <a href="https://minimal-blog.lekoarts.de">
+    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby Starter: Minimal Blog
+</h1>
 
-DevBlog is a fully customizable blog template designed for developers (or anyone else) wanting to get into blogging. It comes ready to go and deploy (with ease) or can be edited and extended however you like. The blog is completely statically generated via GatsbyJS, comes with syntax highlighting (via PrismJS) out of the box, and has server-side rendering built-in, among other things.
+<p align="center">
+  <a href="https://github.com/LekoArts/gatsby-starter-minimal-blog/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Minimal Blog is released under the 0BSD license." />
+  </a>
+  <a href="https://github.com/sponsors/LekoArts">
+    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/LekoArts">
+  </a>
+  <a href="https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
+</p>
 
-To view a live demo, [click here](https://ryanfitzgerald.github.io/devblog/).
+Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting. Using the Gatsby Theme [`@lekoarts/gatsby-theme-minimal-blog`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RyanFitzgerald/devblog)
+[**Demo Website**](https://minimal-blog.lekoarts.de)
 
-## Features
-* Fully responsive
-* Minimalistic
-* Customizable via a ```config.js``` file
-* Easy to deploy
-* Statically-generated via markdown files
-* Server-side rendering
-* Syntax highlighting via PrismJS
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter).
 
-## Contents
-* [Setup and Configuration](#setup-and-configuration)
-  * [Setup](#setup)
-  * [Configuration](#configuration)
-* [Creating New Posts](#creating-new-posts)
-* [Deploying](#deploying)
-* [Changelog](#changelog)
-* [License](#license)
+## ✨ Features
 
-## Setup and Configuration
+- MDX
+- Fully customizable through the usage of Gatsby Themes (and Theme UI)
+- Light Mode / Dark Mode
+- Typography driven, minimal style
+- Tags/Categories support
+- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer). Also allows adding line numbers, line highlighting, language tabs, and file titles.
+- RSS Feed for blog posts
+- SEO (Sitemap, OpenGraph tags, Twitter tags)
+- WebApp Manifest
 
-### Setup
+## ⏱️ Quick Start
 
-#### 1. Install Gatsby CLI
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-The first step is to get the GatsbyJS CLI installed locally. This can be accomplished by running the command ```npm install --global gatsby-cli```
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-minimal-blog)
 
-#### 2. Create a new Gatsby Site using this repo
+## 🚀 Getting Started
 
-When creating a new Gatsby site, the CLI allows you to specify a starter, in this case simply provide the URL for this repo. This can be accomplished by running the command ```gatsby new YOUR_BLOG_NAME https://github.com/RyanFitzgerald/devblog```
+### 1. **Create a Gatsby site.**
 
-#### 3. Edit or use the template as needed
+Use the Gatsby CLI to clone the site and install dependencies:
 
-Now you that you are setup, you can simply use the blog or make edits as needed. For example, run ```gatsby develop``` to start up a hot-reloaded development environment availalbe at localhost:8000 or run ```gatsby build``` to build an optimized production build. For a complete list of CLI commands for Gatsby, take a look at their [documentation](https://www.gatsbyjs.org/docs/).
-
-#### Alternative Setup
-
-Alternatively, if you wish to simply fork this repo or clone it, then you simply need to run ```npm install``` and then ```gatsby develop``` afterwards and you'll be up and running.
-
-### Configuration
-
-Basic configuration can be done via the ```config.js``` file in the root of the project repo. Through this file you can make edits to the primary color of the blog, add a blog author and description, and more. The defaults are as follows:
-
-```javascript
-export default {
-  title: 'Dev Blog', // Required
-  author: 'Ryan Fitzgerald', // Required
-  description: 'Full-stack Web Developer',
-  primaryColor: '#3498db', // Required
-  showHeaderImage: true,
-  showShareButtons: true,
-  postsPerPage: 5, // Required
-  social: {
-    website: 'https://ryanfitzgerald.ca',
-    github: 'https://github.com/ryanfitzgerald',
-    twitter: 'https://twitter.com/ryanafitzgerald',
-    linkedin: 'https://ca.linkedin.com/in/ryanafitzgerald'
-  }
-};
+```sh
+npx gatsby new gatsby-starter-minimal-blog https://github.com/LekoArts/gatsby-starter-minimal-blog
 ```
 
-__Note:__ Any configuration option labelled as "Required" is needed for basic presentational purposes. Anything without the "Required" comment can be removed should you not want it used.
+### 2. **Navigate to your new project.**
 
-#### Understanding the configuration variables
-
-The configuration variables referenced above are used as follows:
-
-| Variable | Description of Use |
-|----------|--------------------|
-| title | The title of the blog. This is used for the page title primarily. |
-| author | The author of the blog. This is used for the header name and page title. |
-| description | The description of the author. This is used for the header under the author. |
-| primaryColor | The primary color of the blog. |
-| showHeaderImage | Flag to show the header image or not. |
-| showShareButtons  | Flag to show social media share buttons on each blog post or not. |
-| postsPerPage | The number of posts per page on the blog homepage. This is used for pagination. |
-| social | Social media profiles of the blog author. Currently only personal website, Github, Twitter, and LinkedIn are supported.|
-
-#### Changing the main header image
-
-To change the default header image, simply override the ```main.jpg``` file in the ```/src``` folder.
-
-#### Changing the favicon
-
-To change the default favicon, simply override the ```favicon.ico``` file in the ```/src``` folder.
-
-## Creating New Posts
-
-All blog posts can be found in ```/src/pages``` and are statically built once the ```gatsby build``` command is run. To create a new post, simply create a new folder in ```/src/pages``` with the name of the url you'd like to have. For example, if you wish to have the url appear as ```myblog.com/hello-world``` you would create the folder as ```hello-world```. Once the folder is created, simply create an ```index.md``` file within it.
-
-The top of the pages must all contain the same markdown which tells Gatsby the needed information about the specific post. The basic template is:
-
-```markdown
----
-title: New Beginnings
-date: "2018-07-01"
-featuredImage: './featured.jpg'
----
-
-This top portion is the beginning of the post and will show up as the excerpt on the homepage.
-
-<!-- end -->
+```sh
+cd gatsby-starter-minimal-blog
 ```
 
-In the above code snippet all that is required is the **title** and the **date**. The featured image is optional and can be added by simply adding an image to the page folder you just created and referencing like the above example. The excerpt portion is optional as well and if you do not use the ```<!-- end -->``` marker, the first bit of the post will be used as the excerpt automatically.
+### 3. **Open the code and start customizing!**
 
-This template ships with 3 blog post examples which contain everything from code snippet usage, inserting images, using featured images and excerpts, and more.
+Start the site by running `npm run develop`.
 
-## Deploying
+Your site is now running at `http://localhost:8000`!
 
-Once you are ready to deploy the blog and make it live, you have a couple of options available to you.
+If you want to learn more about how you can use a Gatsby starter that is configured with a Gatsby theme, you can check out this [shorter](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/using-a-gatsby-theme/) or [longer](https://www.gatsbyjs.com/tutorial/using-a-theme/) tutorial. The tutorials don't exactly apply to this starter however the concepts are the same.
 
-### Manual Deploy
+## 📝 Using and modifying this starter
 
-Manually deploying the blog simply requires you run a ```gatsby build``` in order to create a production build. After that, you can use any server you'd normally a React app to, such as a Digital Ocean droplet or an AWS instance. All that is required is some way to serve the static files.
+**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the underlying theme!
 
-If you are unfamiliar with deploying React applications, there are a number of other options.
+This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-minimal-blog`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog).
 
-### GitHub Pages
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-minimal-blog/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
-In order to deploy to GitHub pages, you need to first set your path prefix in ```gatsby-config.js```. The default is ```pathPrefix: '/devblog'``` however this should be changed to whatever the repo name you chose is. For example, if you have the blog located in ```https://github.com/YOURUSERNAME/myblog``` and want it deployed to ```https://YOURUSERNAME.github.io/myblog``` then you would set the path prefix to ```pathPrefix: '/myblog'```.
+### Code Highlighting
 
-Next, simply run ```npm run deploy``` and your blog will be deployed.
+Since the underlying theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
 
-Alternatively, if you wish to deploy it to ```https://YOURUSERNAME.github.io``` (i.e. your user / organization site and not a porject site), then a couple addition changes are required. The official Gatsby documentation has them outlined well [here](https://YOURUSERNAME.github.io).
+**Language tabs:**
 
-### Netlify
+When you add a language (such as e.g. `js` or `javascript`) to the code block, a little tab will appear at the top left corner.
 
-One of the easiest methods of deploying the blog would be to use [Netlify](https://www.netlify.com/). To deploy to Netlify, simply click the button below and follow the prompts.
+````
+```js
+// code goes here
+```
+````
 
-<!-- Markdown snippet -->
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RyanFitzgerald/devblog)
+**Code titles:**
 
-### Other
+You can display a title (e.g. the file path) above the code block.
 
-The options outlined above are not the only options available to you to deploy the blog. The official Gatsby documentation goes into detail about a number of other options. In order to read more about deployment options, [click here](https://www.gatsbyjs.org/docs/deploy-gatsby).
+````
+```jsx title=your-title
+// code goes here
+```
+````
 
-## Changelog
+Or without a specific language:
 
-### 1.0.0
-* Initial release
+````
+```none title=your-title
+// code goes here
+```
+````
 
-### 2.0.0
-* Upgrade to Gatsby 2.0.31 (Big thanks to [ttristan](https://github.com/ttristan) for the help)
-* Remove deprecated functions
+**Line highlighting:**
 
-## License
+You can highlight single or multiple (or both) lines in a code block. You need to add a language.
 
-Licensed under MIT License. See [LICENSE.md](LICENSE.md) for more.
+````
+```js highlight=2,4-5
+const test = 3
+const foo = 'bar'
+const harry = 'potter'
+const hermione = 'granger'
+const ron = 'weasley'
+```
+````
+
+**Show line numbers:**
+
+If you want to show line numbers you can either globally enable them (see theme options) or on a block-by-block basis. You can also combine that with the other attributes.
+
+````
+```js withLineNumbers
+// code goes here
+```
+````
+
+### Adding content
+
+#### Adding a new blog post
+
+New blog posts will be shown on the index page (the three most recent ones) of this theme and on the blog overview page. They can be added by creating MDX files inside `content/posts`. General setup:
+
+1. Create a new folder inside `content/posts`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Add images to the created folder (from step 1) you want to reference in your blog post
+1. Reference an image as your `banner` in the frontmatter
+1. Write your content below the frontmatter
+1. Add a `slug` to the frontmatter to use a custom slug, e.g. `slug: "/my-slug"` (Optional)
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
+
+**Frontmatter reference:**
+
+```md
+---
+title: Introduction to "Defence against the Dark Arts"
+date: 2019-11-07
+description: Defence Against the Dark Arts (abbreviated as DADA) is a subject taught at Hogwarts School of Witchcraft and Wizardry and Ilvermorny School of Witchcraft and Wizardry.
+defer: false
+tags:
+  - Tutorial
+  - Dark Arts
+banner: ./defence-against-the-dark-arts.jpg
+canonicalUrl: https://random-blog-about-curses.com/curses-counter-curses-and-more
+---
+```
+
+**The fields `description`, `banner`, `defer` and `canonicalUrl` are optional!** If no description is provided, an excerpt of the blog post will be used. If no banner is provided, the default `siteImage` (from `siteMetadata`) is used. If no `canonicalUrl` is provided, it will not be included in the header.
+
+The `date` field has to be written in the format `YYYY-MM-DD`!
+
+#### Adding a new page
+
+Additional pages can be created by placing MDX files inside `contents/pages`, e.g. an "About" or "Contact" page. You'll manually need to link to those pages, for example by adding them to the navigation (in `siteMetadata`). General instructions:
+
+1. Create a new folder inside `content/pages`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Write your content below the frontmatter
+1. Optionally add files/images to the folder you want to reference from the page
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
+
+**Frontmatter reference:**
+
+```md
+---
+title: About
+slug: "/about"
+defer: false
+---
+```
+
+### Changing the "Hero" text
+
+To edit the hero text ("Hi, I'm Lupin...), create a file at `src/@lekoarts/gatsby-theme-minimal-blog/texts/hero.mdx` to edit the text.
+
+### Changing the "Projects" part
+
+To edit the projects part below "Latest posts", create a file at `src/@lekoarts/gatsby-theme-minimal-blog/texts/bottom.mdx` to edit the contents.
+
+### Extending the footer of the post
+
+Inside the [`<Post />` component](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/src/components/post.tsx) there's also a `<PostFooter />` component that you can shadow to display elements between the end of the post and the global footer. By default it returns `null`. Create a file at `src/@lekoarts/gatsby-theme-minimal-blog/components/post-footer.jsx` to edit this section. The `<PostFooter />` component receives the complete `post` prop that `<Post />` also receives.
+
+### Change your `static` folder
+
+The `static` folder contains the icons, social media images and `robots.txt`. Don't forget to change these files, too! You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate the image files inside `static`.
+
+## 🤔 Questions or problems?
+
+If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this project, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's website](https://www.gatsbyjs.com/).
+
+### Themes
+
+To learn more about Gatsby themes specifically, I recommend checking out the [theme docs](https://www.gatsbyjs.com/docs/themes/).
+
+### General
+
+- **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _How-to Guides_ and _Reference_ items in the primary navigation.
+
+## 🌟 Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!

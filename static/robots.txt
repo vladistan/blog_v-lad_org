@@ -1,2 +1,3 @@
 User-agent: *
-Allow: /
+
+sitemap: https://blog.v-lad.org/sitemap-index.xml
