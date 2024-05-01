@@ -126,7 +126,7 @@ const config: GatsbyConfig = {
     }
   }
 }`,
-            output: `rss.xml`,
+            output: `/feed`,
             title: `Vlad Korolev's Blog`,
           },
         ],
