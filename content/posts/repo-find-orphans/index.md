@@ -1,7 +1,6 @@
---- 
+---
 title: Small tool for finding orphans in the projects managed by repo
 date: "2024-05-11"
-featuredImage: './featured.jpg'
 discussionId: "2024-05-01-repo-find-orphans"
 tags: [android, repo, devtools]
 ---
@@ -30,6 +29,6 @@ or adding them to the manifest.
 
 You can download this tool from [PyPi](https://pypi.org/project/repo-find-orphans/) or [Github](https://github.com/vladistan/repo-find-orphans).
 
-I hope you find it useful. 
+I hope you find it useful.
 
 

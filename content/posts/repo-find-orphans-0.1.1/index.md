@@ -1,7 +1,6 @@
---- 
+---
 title: New release v0.1.1 of repo-find-orphans
 date: "2024-06-09"
-featuredImage: './featured.jpg'
 discussionId: "2024-06-09-repo-find-orphans-v0-1-1"
 tags: [android, repo, devtools]
 ---
@@ -12,4 +11,4 @@ This release introduces a new feature: [**remote orphan detection**](https://git
 
 **Breaking Changes:**
 
-The version 0.1.1 introduces breaking changes to the CLI interface, see [documentation](https://github.com/vladistan/repo-find-orphans/tree/v0.1.1?tab=readme-ov-file#usage) for details. 
+The version 0.1.1 introduces breaking changes to the CLI interface, see [documentation](https://github.com/vladistan/repo-find-orphans/tree/v0.1.1?tab=readme-ov-file#usage) for details.
