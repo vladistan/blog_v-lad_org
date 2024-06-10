@@ -35,13 +35,19 @@ export type MBPostProps = {
 const px = [`16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.1) 0px ${v} ${v} 0px`)
 
+const parseDate = (dateStr: string) => {
+  const [day, month, year] = dateStr.split(".");
+  const date =  new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
 const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data: { post }, children }) => (
   <Layout>
     <Heading as="h1" variant="styles.h1">
       {post.title}
     </Heading>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-      <time>{post.date}</time>
+      <time>{parseDate(post.date)}</time>
       {post.tags && (
         <React.Fragment>
           {` — `}

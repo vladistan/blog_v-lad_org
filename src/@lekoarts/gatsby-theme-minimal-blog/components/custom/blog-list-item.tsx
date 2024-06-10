@@ -20,13 +20,19 @@ type BlogListItemProps = {
   showTags?: boolean
 }
 
+const parseDate = (dateStr: string) => {
+  const [day, month, year] = dateStr.split(".");
+  const date =  new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
 const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => (
   <Box mb={4}>
     <Link to={post.slug} sx={(t) => ({ ...t.styles?.a, fontSize: [1, 2, 3], color: `text` })}>
       {post.title}
     </Link>
     <p sx={{ color: `secondary`, mt: 1, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
-      <time>{post.date}</time>
+      <time>{parseDate(post.date)}</time>
       {post.tags && showTags && (
         <React.Fragment>
           {` — `}
