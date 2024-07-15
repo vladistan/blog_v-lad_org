@@ -2,6 +2,7 @@
 title: How to Stop Proxmox VE Virtual Machines Across a Cluster Using the CLI
 date: "2024-05-04"
 discussionId: "2024-05-04-proxmox-restart"
+tags: [proxmox, devops]
 ---
 
 ![screen](./proxmox.jpg)
