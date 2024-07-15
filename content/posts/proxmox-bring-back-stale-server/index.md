@@ -60,9 +60,9 @@ node having an outdated configuration.
 1. Run the commands below to check if corosync is broken.
 
    ```
-   systemctl start corosync
-   journalctl -fu corosync &
    systemctl stop corosync
+   journalctl -fu corosync &
+   systemctl start corosync
    ```
 
 2. Look for log messages similar to the following:
