@@ -43,6 +43,7 @@ const config: GatsbyConfig = {
             url: `http://v-lad.org`,
           },
         ],
+        mdx: true,
       },
     },
     {
