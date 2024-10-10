@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@debiki/gatsby-plugin-talkyard": "^0.5.8",
-    "@lekoarts/gatsby-theme-minimal-blog": "https://gitpkg.vercel.app/vladistan/gatsby-themes/themes/gatsby-theme-minimal-blog?f9c701",
+    "@lekoarts/gatsby-theme-minimal-blog": "https://gitpkg.vercel.app/vladistan/gatsby-themes/themes/gatsby-theme-minimal-blog?0f99321",
     "gatsby": "^5.13.3",
     "gatsby-adapter-netlify": "^1.1.4",
     "gatsby-plugin-feed": "^5.13.1",
