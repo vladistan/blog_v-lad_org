@@ -1,19 +1,23 @@
 ---
 title: "RDF-Uploader: Simplifying RDF Data Ingestion"
-date: "2025-04-11"
-discussionId: "2025-04-11-rdf-uploader"
+date: "2025-05-10"
+discussionId: "2025-05-10-rdf-uploader"
 redirect_from:
 ---
 
-Lately I’ve been knee-deep in knowledge-graph work, and most of my
-projects require juggling several triple stores at the same time —MarkLogic, Blazegraph,
-RDFox, AWS Neptune, StarDog and more. Each store comes with a different
-bulk-loading process, its own endpoint URLs, authentication rules,
-and named-graph conventions. Dealing with those differences gets
-very tedious very fast.
+Recently, I've been working extensively with knowledge graphs, which
+often involves work with different types of triple stores like
+[MarkLogic](https://www.marklogic.com/),
+[Blazegraph](https://github.com/blazegraph/database),
+[RDFox](https://www.oxfordsemantic.tech/rdfox), [AWS
+Neptune](https://aws.amazon.com/neptune/), and
+[StarDog](https://www.stardog.com/) at the same time.  Each store
+comes with a different bulk-loading process, its own endpoint URLs,
+authentication rules, and named-graph conventions. Dealing with
+those differences became very tedious very quickly.
 
 
-To put an end to these headaches, I built **RDF-Uploader**—a tool
+To put an end to these headaches, I built [**RDF-Uploader**](https://github.com/vladistan/rdf-uploader) — a tool
 that streamlines the workflow and offers a consistent, high-performance
 method for uploading large RDF datasets.
 
@@ -27,30 +31,34 @@ Below are the typical ways you can upload data to RDF Store:
 
  - Use RDFLib’s `store.update` method.
 
-	This approach relies on the standard SPARQL Update protocol, so it will usually work with any
-	triple store. Unfortunately, it is also the slowest option. The simplest usage pattern—calling
-	`update` in a loop for one triple at a time—is easy to write but painfully inefficient. Stores
-	like AWS Neptune take roughly the same time to ingest a single triple as they do a batch of a
-	thousand, and the difference is even greater with high-performance engines such as RDFox.
-  
+    This approach relies on the standard [SPARQL Update
+    protocol](https://www.w3.org/TR/sparql11-update/),
+    so it will most likely work with any triple store. However, it is
+    the slowest option. The simplest usage pattern is easy to write;
+    however, calling [`store.update`](https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.plugins.stores.html#rdflib.plugins.stores.memory.Memory.update) in a loop for one triple at a time is
+    painfully inefficient. Stores like [AWS Neptune](https://aws.amazon.com/neptune/) 
+    take roughly the same time to ingest a single triple as they do a batch of a
+    thousand, and the difference is even greater with high-performance
+    engines such as RDFox.
 
   - Use proprietary method recommended by the store.
   
-        Most triple stores ship with their own proprietary bulk-loading tools, and they’re usually far
-        faster than looping over RDFLib’s `store.update`. The catch is that every vendor does it
-        differently. AWS Neptune, for example, ingests data from an S3 bucket, while RDFox and
-        Blazegraph expect a file that already lives on the server’s local disk.
+    Most triple stores implement their own proprietary bulk-loading tools, and they’re usually far
+    faster than looping over RDFLib’s `store.update`. The catch is that every vendor does it
+    differently. AWS Neptune, for example, [ingests data from an S3 bucket](https://docs.aws.amazon.com/neptune/latest/userguide/bulk-load.html), while 
+    Blazegraph expects a file that already lives on the [server's local disk](https://github.com/blazegraph/database/wiki/Bulk_Data_Load).
 
-        When your project has to target several stores at once, juggling these loader-specific
-        workflows quickly becomes painful. Each path demands extra code to stage the files—either
-        uploading to S3 or copying them onto the server—and each path requires additional permissions
-        for developers and CI pipelines. In many organisations, granting that level of access simply
-        isn’t feasible.
+    When your project has to target several stores at once, juggling these loader-specific
+    workflows quickly becomes painful. Each path demands extra code to stage the files—either
+    uploading to S3 or copying them onto the server—and each path requires additional permissions
+    for developers and CI pipelines. In many organizations, granting that level of access simply
+    isn’t feasible.
 	 
   - Use CURL to post data to a bulk endpoint
   
 	Almost all triple stores provide an HTTP endpoint for bulk loading data.  Either via standard
-	Graph Store Protocol or through some proprietary means.   This method is performant and doesn't
+	[Graph Store Protocol](https://www.w3.org/TR/sparql11-http-rdf-update/) or 
+    through some proprietary means like [Stardog's CLI](https://docs.stardog.com/operating-stardog/database-administration/adding-data#adding-data-via-the-cli).   This method is performant and doesn't
 	require setting up any special access.  However,  there are a few challenges to this method as
 	well.  First, the actual implementation of the endpoint is different for different stores. Some
 	support the standard protocols, some implement their own.  Second, using CURL implies loading 
@@ -62,11 +70,14 @@ Below are the typical ways you can upload data to RDF Store:
 	
 	The later limitation can be mitigated by splitting the dataset into smaller parts and posting them
 	to the triple store separately.  But this has to be done either manually through tedious and
-	error prone process, or by developing a complex program to autmoate the splitting.
+	error prone process, or by developing a complex program to automate the splitting.
 	
 	
-So to improve improve the data loading experience I developed an `rdf-uploader`, a tool that takes the best
-from the above methods without the downsides:
+To make the data loading experience less annoying, I created
+[RDF-Uploader](https://github.com/vladistan/rdf-uploader), a tool
+that combines the advantages of the above methods while
+eliminating their downsides.
+
 
 ### Key Features
 
@@ -75,26 +86,26 @@ from the above methods without the downsides:
 - **Authentication**: Supports authentication if required by a store. 
 - **Named Graphs**: Support for uploading data to specific named graphs.
 - **Content Type Detection**: Automatically detects and handles various RDF formats.
-- **Performance Optimization**:  Supports tweaking the concurency and batch size parameters
+- **Performance Optimization**:  Supports tweaking the concurrency and batch size parameters
 
 
 Supported data formats:
 
-- Turtle
-- N-Triples
-- N3
-- RDF/XML
-- NQuads
-- JSON-LD
+- [Turtle](https://www.w3.org/TR/turtle/)
+- [N-Triples](https://www.w3.org/TR/n-triples/)
+- [N3](https://www.w3.org/TeamSubmission/n3/)
+- [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/)
+- [NQuads](https://www.w3.org/TR/n-quads/)
+- [JSON-LD](https://www.w3.org/TR/json-ld/)
 
 Supported data stores:
 
 
-- Marklogic
-- BlazeGraph
-- AWS Neptune
-- Stardog
-- RDFOX
+- [MarkLogic](https://www.marklogic.com/)
+- [Blazegraph](https://blazegraph.com/)
+- [AWS Neptune](https://aws.amazon.com/neptune/)
+- [Stardog](https://www.stardog.com/)
+- [RDFox](https://www.oxfordsemantic.tech/rdfox)
 
 The tool has a CLI interface:
 
@@ -104,7 +115,7 @@ rdf-uploader file.ttl --endpoint http://localhost:3030/dataset/sparql
 
 ```
 
-Or can be used programatically:
+Or can be used programmatically:
 
 
 ```python
@@ -129,39 +140,11 @@ await upload_rdf_file(
 ```
 
 
-The tool is available through a variety of methods
+### Further steps:
+
+See the [project repository](https://github.com/vladistan/rdf-uploader) for additional information.
 
 
-PIP
+### License:
 
-```bash
-pip install rdf-uploader
-rdf-uploader file.ttl --endpoint http://localhost:3030/dataset/sparql
-```
-
-
-Docker
-
-
-Homebrew
-
-
-Further reading:
-
-See the README at the project page for additional details
-
-
-
-
-### Conclusion
-
-RDF-Uploader is a powerful tool for simplifying the process of
-uploading RDF data to various triple stores. Its support for batch
-uploads, concurrency, and multi-store compatibility makes it an
-essential tool for knowledge graph developers. Whether you're working
-on a small project or a large-scale knowledge graph, RDF-Uploader
-can save you time and effort.
-
-Give it a try and let us know how it works for you!
-
-[![License MIT](https://img.shields.io/github/license/vladistan/rdf-uploader)](https://github.com/vladistan/rdf-uploader)
+This project is licensed under the [MIT Licensee](https://github.com/vladistan/rdf-uploader/blob/main/LICENSE). 
