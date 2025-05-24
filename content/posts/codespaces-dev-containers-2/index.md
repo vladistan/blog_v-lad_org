@@ -1,7 +1,7 @@
 ---
 title: Codespaces, Dev Containers, Oh-My! (Part 2/3)
-date: "2025-03-30"
-discussionId: "2025-03-30-dotfiles-codespaces-2"
+date: "2025-05-27"
+discussionId: "2025-05-27-dotfiles-codespaces-2"
 redirect_from:
 ---
 
@@ -18,11 +18,11 @@ There are two ways to open a local version of VSCode connected to your Codespace
 
 The first method is to open it from a running Codespace environment. To do this, press `Cmd-P` (or `Ctrl-P` on Windows) to open the command palette, then type "desktop" to find the option to open the repository in your local VSCode desktop application:
 
-![Open in VSCode from Codespace](opening-from-vscode.png)
+![Open in VSCode from Codespace](opening-from-vscode.gif)
 
 The second method is to open the Codespace directly from the GitHub repository webpage. Navigate to the repository, click on the green "Code" button, and select the "Open with
 
-![Open in VSCode from Codespace](opening-from-webpage.png)
+![Open in VSCode from Webpage](opening-from-webpage.gif)
 
 It's important to note that when you open a Codespace in your local VSCode, the remote environment is still running and consuming your Codespaces usage quota. If you exceed your free allocated minutes, you may incur charges for the additional usage.
 
@@ -46,9 +46,17 @@ Additionally, if a collaborator creates a Codespace from your repository, their 
 
 # But I don't want to give my money to M$, what are the alternatives?
 
-If you're looking for other options besides Microsoft's Codespaces for cloud development, there are several choices. These alternatives offer different features, so you can pick the one that suits you best. Let's take a look at some popular options.
+If you're looking for other options besides Microsoft's Codespaces for cloud development, there are several choices. These alternatives offer different features, so you can pick the one that suits you best. 
 
-
+| Environment         | Devcontainer Support | Documentation Link           | Notes                                                                                 |
+|---------------------|---------------------|------------------------------|---------------------------------------------------------------------------------------|
+| Coder               | Full                | [Coder Docs](https://coder.com/docs)            | Uses devcontainer.json with Terraform integration. Supports Docker, Kubernetes, and OpenShift. |
+| CodeSandbox         | Partial             | [CodeSandbox Docs](https://docs.codesandbox.io/) | Supports most specs but has implementation differences (e.g., forwardPorts behavior).  |
+| devenv              | Full                | [devenv Docs](https://devenv.sh/docs/devcontainer/) | Requires `devcontainer.enable = true` in config. Auto-generates `.devcontainer.json`.  |
+| DevPod              | Full                | [DevPod Docs](https://devpod.sh/docs/)           | Explicitly adopts devcontainer.json, auto-detects configs, and supports multi-provider backends. |
+| Daytona             | Partial*            | [GitHub](https://github.com/daytonaio/daytona)   | Provides devcontainer generator tool, but full platform support not explicitly documented. |
+| Gitpod              | Full                | [Gitpod Docs](https://www.gitpod.io/docs/devcontainers) | Fully supports single/multi-container setups via devcontainer.json.                  |
+| GitHub Codespaces   | Full                | [GitHub Blog](https://github.blog/2022-06-06-dev-container-support-in-github-codespaces/) | Native support with in-browser configuration editor.                                  |
 
 
 
@@ -76,6 +84,9 @@ JetBrains Gateway
 Can work with PyCharm
 Doesn't work in CE
 Support is lacking
+
+
+
 ### Use SSH trick
 Can work with Cusror
 Can work with Zed
