@@ -48,15 +48,13 @@ Additionally, if a collaborator creates a Codespace from your repository, their 
 
 If you're looking for other options besides Microsoft's Codespaces for cloud development, there are several choices. These alternatives offer different features, so you can pick the one that suits you best. 
 
-| Environment         | Devcontainer Support | Documentation Link           | Notes                                                                                 |
-|---------------------|---------------------|------------------------------|---------------------------------------------------------------------------------------|
-| Coder               | Full                | [Coder Docs](https://coder.com/docs)            | Uses devcontainer.json with Terraform integration. Supports Docker, Kubernetes, and OpenShift. |
-| CodeSandbox         | Partial             | [CodeSandbox Docs](https://docs.codesandbox.io/) | Supports most specs but has implementation differences (e.g., forwardPorts behavior).  |
-| devenv              | Full                | [devenv Docs](https://devenv.sh/docs/devcontainer/) | Requires `devcontainer.enable = true` in config. Auto-generates `.devcontainer.json`.  |
-| DevPod              | Full                | [DevPod Docs](https://devpod.sh/docs/)           | Explicitly adopts devcontainer.json, auto-detects configs, and supports multi-provider backends. |
-| Daytona             | Partial*            | [GitHub](https://github.com/daytonaio/daytona)   | Provides devcontainer generator tool, but full platform support not explicitly documented. |
-| Gitpod              | Full                | [Gitpod Docs](https://www.gitpod.io/docs/devcontainers) | Fully supports single/multi-container setups via devcontainer.json.                  |
-| GitHub Codespaces   | Full                | [GitHub Blog](https://github.blog/2022-06-06-dev-container-support-in-github-codespaces/) | Native support with in-browser configuration editor.                                  |
+| Environment         | Documentation Link           | Notes                                                                                 |
+|---------------------|------------------------------|---------------------------------------------------------------------------------------|
+| Coder               | [Coder Docs](https://coder.com/docs/admin/templates/managing-templates/devcontainers)            | Open source project with a paid version. You can use your own cloud provider or on premises environment. |
+| DevPod              | [DevPod Docs](https://devpod.sh/docs/developing-in-workspaces/devcontainer-json)           | Desktop appication, provisons development environments in on your local machine with docker, in your on premises environment or in the public cloud. |
+| CodeSandbox         | [CodeSandbox Docs](https://codesandbox.io/docs/tutorial/getting-started-with-dev-containers) | Commerical application, providers instant cloud development environments |
+| Gitpod              | [Gitpod Docs](https://www.gitpod.io/docs/devcontainers) | Fully supports single/multi-container setups via devcontainer.json.                  |
+| Eclipse Che         | [Eclipse Che Docs](https://www.eclipse.org/che/docs/che-7.2.0/che-user-guide/che-user-guide.html) | A project from ReadHat heavy support for Enterprise type development.  There is an open source version you can run on your own K8s cluster |
 
 
 
