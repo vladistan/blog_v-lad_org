@@ -57,31 +57,30 @@ If you're looking for other options besides Microsoft's Codespaces for cloud dev
 | Eclipse Che         | [Eclipse Che Docs](https://www.eclipse.org/che/docs/che-7.2.0/che-user-guide/che-user-guide.html) | A project from ReadHat heavy support for Enterprise type development.  There is an open source version you can run on your own K8s cluster |
 
 
-
-
-
-
-
-
-
-
-
-
-### But I and my team-mates have different workspace customizations that we like
-vladistan/dotfiles-codespaces: Simpler version of dotfiles for codespaces
-
-### But I don't like giving money to M$                                
-coder/coder: Provision remote development environments via Terraform
-CodeSandbox: Instant Cloud Development Environments
-Fast, Declarative, Reproducible, and Composable Developer Environments - devenv
-loft-sh/devpod: Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker.
-Providers | Daytona
-
 ### But I don't like VSCode
-JetBrains Gateway
-Can work with PyCharm
-Doesn't work in CE
-Support is lacking
+
+While Visual Studio Code (VSCode) is an extremely popular editor, it's not the ideal choice for everyone. Some developers prefer different workflows, editor ergonomics, or simply have a long-standing preference for other environments and keyboard shortcuts. The good news is that you don't need to be a fan of VSCode to take full advantage of Codespaces and DevContainers. These technologies are highly flexible, and you can often use your preferred tools to interact with cloud development environments.
+
+Here are a few notable alternatives:
+
+#### CodeSpaces Jupyter Environment
+
+If your work is data science or notebook-centric, Codespaces offers first-class support for Jupyter notebooks. You can open and run `.ipynb` files directly in the browser without ever launching the full VSCode editor interface. The Jupyter environment allows you to leverage all the benefits of the cloud-powered Codespace—such as persistent environments and powerful compute—while sticking with a workflow tailored to interactive Python development.
+
+![Open Codespace in Jupyter](opening-in-jupyter.gif)
+
+
+#### JetBrains Gateway
+
+For those who prefer JetBrains IDEs like PyCharm, IntelliJ IDEA, or WebStorm, JetBrains Gateway is a compelling option. JetBrains Gateway enables you to connect your local IDE to a remote development environment such as a Codespace or any SSH-accessible DevContainer. This means you can code in your familiar JetBrains environment while all your code runs remotely in the cloud, benefiting from the same environment consistency, toolchain setup, and preconfigured containers as with Codespaces. 
+
+> Note: JetBrains Gateway does not currently support the free Community Editions for all JetBrains products, and support for Codespaces may require additional configuration or plugins. However, for many paid versions, this remote workflow is seamless and well-supported.
+
+By leveraging these alternatives, you can enjoy the convenience and power of cloud development environments without sacrificing your favorite tools or workflows.
+
+
+![Open Coder in JetBrains Gateway](opening-in-jetbrains-gateway.gif)
+
 
 
 
